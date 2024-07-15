@@ -1,0 +1,73 @@
+﻿<Page x:Class="BarLight.Pages.P_Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:model="clr-namespace:BarLight.Model"
+      xmlns:local="clr-namespace:BarLight.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="P_Registration">
+
+    <Page.Resources>
+        <model:ListCities x:Key="listCitites"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource Standart}" Text="Регистрация аккаунта" FontSize="20" HorizontalAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource Standart}" Text="Ваши личные данные" HorizontalAlignment="Center"/>
+            <Grid Grid.Row="1">
+                <TextBlock Style="{StaticResource Standart}" Text="Эти данные будут автоматически вводится при доставке" Width="180" TextAlignment="Left"
+                           HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 130 180 0" FontSize="12.5"/>
+
+                <TextBlock Style="{StaticResource Standart}" Text="Имя*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 5 0 0"/>
+                <TextBlock Style="{StaticResource Standart}" Text="Фамилия*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205 5 0 0"/>
+                <TextBlock Style="{StaticResource Standart}" Text="Отчество" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385 5 0 0"/>
+                <TextBox Name="txtBoxName" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 30 0 0" Width="160" FontSize="18"/>
+                <TextBox Name="txtBoxSurname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205 30 0 0" Width="160" FontSize="18"/>
+                <TextBox Name="txtBoxPatronymic" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385 30 0 0" Width="160" FontSize="18"/>
+                
+                <TextBlock Style="{StaticResource Standart}" Text="Ваш город" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 65 0 0"/>
+                <ComboBox Style="{StaticResource StandartComboBox}" ItemsSource="{Binding Source={StaticResource listCitites}}" Name="cmbBoxCity" HorizontalAlignment="Left" 
+                          VerticalAlignment="Top" Margin="25 90 0 0" FontSize="18" Width="240"/>
+
+                <TextBlock Style="{StaticResource Standart}" Text="Ваш адрес" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290 65 0 0"/>
+                <TextBox Name="txtBoxAdress" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290 90 0 0" Width="300" FontSize="12.5"/>
+
+                <TextBlock Style="{StaticResource Standart}" Text="Номер телефона(без кода региона)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 125 0 0"/>
+                <TextBox Name="txtBoxPNum" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 155 0 0" FontSize="18" Width="200"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource Standart}" Text="Данные для входа" HorizontalAlignment="Center"/>
+            <Grid Grid.Row="1">
+                <TextBlock Style="{StaticResource Standart}" Text="Логин*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 5 0 0"/>
+                <TextBlock Style="{StaticResource Standart}" Text="Пароль*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 65 0 0"/>
+                <TextBlock Style="{StaticResource Standart}" Text="Повторите пароль*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250 65 0 0"/>
+                <TextBlock Style="{StaticResource Standart}" Text="Электронная почта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250 5 0 0"/>
+                <TextBox Name="txtBoxLogin" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 30 0 0"/>
+                <TextBox Name="txtBoxPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 90 0 0"/>
+                <TextBox Name="txtBoxPasswordCheck" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250 90 0 0"/>
+                <TextBox Name="txtBoxEMail" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250 30 0 0" Width="200"/>
+
+                <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Зарегистрироваться" FontSize="16" 
+                        Width="200" Margin="20" Click="btnRegister_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

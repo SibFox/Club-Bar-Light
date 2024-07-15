@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <LinearGradientBrush x:Key="GradientPanelDark">
+        <GradientStop Color="#2f1a3b" Offset="0"/>
+        <GradientStop Color="#3f2454" Offset="0.5"/>
+        <GradientStop Color="#2f1a3b" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GradientPanelLight">
+        <GradientStop Color="#382957" Offset="0"/>
+        <GradientStop Color="#3f2f5e" Offset="0.5"/>
+        <GradientStop Color="#382957" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientButtonDark">
+        <GradientStop Color="#fff02b" Offset="0"/>
+        <GradientStop Color="#fffaab" Offset="0.5"/>
+        <GradientStop Color="#fff234" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GradientButtonLight">
+        <GradientStop Color="#fffaab" Offset="0"/>
+        <GradientStop Color="#fff02b" Offset="0.5"/>
+        <GradientStop Color="#fffaab" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GradientButtonOver">
+        <GradientStop Color="#433a67" Offset="0"/>
+        <GradientStop Color="#fff02b" Offset="0.45"/>
+        <GradientStop Color="#fffaab" Offset="0.50"/>
+        <GradientStop Color="#fff02b" Offset="0.55"/>
+        <GradientStop Color="#433a67" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientTextLight">
+        <GradientStop Color="#fff02b" Offset="0"/>
+        <GradientStop Color="#fff64f" Offset="0.5"/>
+        <GradientStop Color="#ffe949" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientTextGold">
+        <GradientStop Color="#f2d530" Offset="0"/>
+        <GradientStop Color="#fffaab" Offset="0.25"/>
+        <GradientStop Color="#f2d530" Offset="0.5"/>
+        <GradientStop Color="#fffaab" Offset="0.75"/>
+        <GradientStop Color="#f2d530" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientTextGoldReversed">
+        <GradientStop Color="#fffaab" Offset="0"/>
+        <GradientStop Color="#f2d530" Offset="0.25"/>
+        <GradientStop Color="#fffaab" Offset="0.5"/>
+        <GradientStop Color="#f2d530" Offset="0.75"/>
+        <GradientStop Color="#fffaab" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GradientTextPurple">
+        <GradientStop Color="#381f47" Offset="0"/>
+        <GradientStop Color="#433a67" Offset="0.25"/>
+        <GradientStop Color="#381f47" Offset="0.5"/>
+        <GradientStop Color="#433a67" Offset="0.75"/>
+        <GradientStop Color="#381f47" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="GradientBGMain">
+        <GradientStop Color="#3f2f5e"/>
+        <GradientStop Color="#2f1a3b" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="GradientBGMenu">
+        <GradientStop Color="#00433a67" Offset="0"/>
+        <GradientStop Color="#0038214a" Offset="0.28"/>
+        <GradientStop Color="#a99852" Offset="0.5"/>
+        <GradientStop Color="#003f2f5e" Offset="0.72"/>
+        <GradientStop Color="#002f1a3b" Offset="1"/>
+    </LinearGradientBrush>
+</ResourceDictionary>

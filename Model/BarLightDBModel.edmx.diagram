@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="740ab222a9eb430d9111e0e9e7e11d6e" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="BarLightDBModel.Administrator" Width="1.5" PointX="7.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.City" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.Client" Width="1.5" PointX="3.125" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.ClientCart" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.Establishment" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.FoodCategory" Width="1.5" PointX="3.125" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.FoodMenu" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.Order" Width="1.5" PointX="7.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.OrderCart" Width="1.5" PointX="7.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.OrderStatus" Width="1.5" PointX="9.125" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.PaymentMethod" Width="1.5" PointX="9.125" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarLightDBModel.ReservedTable" Width="1.5" PointX="3.125" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="BarLightDBModel.FK_Client_ToCity" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_Order_ToCity" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_ClientCart_ToClient" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_Order_ToClient" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_ReservedTables_ToClient" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_ClientCart_ToFoodMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_ReservedTables_ToEstablishment" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_FoodMenu_ToFoodCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_OrderCart_ToFoodMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_Order_OrderStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_Order_PaymentMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="BarLightDBModel.FK_OrderCart_ToOrder" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

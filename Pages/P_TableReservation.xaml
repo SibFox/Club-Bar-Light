@@ -1,0 +1,75 @@
+﻿<Page x:Class="BarLight.Pages.P_TableReservation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BarLight.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="P_TableReservation">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Column="0" Name="lstViewEstablishments" ScrollViewer.HorizontalScrollBarVisibility="Hidden" HorizontalAlignment="Stretch" 
+                  Background="Transparent" BorderThickness="0" BorderBrush="Transparent">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <!--MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"-->
+                    <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), 
+                        RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+                        ItemWidth="{Binding (ListView.View).ItemWidth, 
+                        RelativeSource={RelativeSource AncestorType=ListView}}"
+                        ItemHeight="{Binding (ListView.View).ItemHeight, 
+                        RelativeSource={RelativeSource AncestorType=ListView}}"
+                               Orientation="Horizontal">
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="155"/>
+                            <RowDefinition Height="auto" MaxHeight="45"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Width="220" Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                               Margin="4">
+                            <Image.Source>
+                                <Binding Path="Image" >
+                                    <Binding.TargetNullValue>
+                                        <ImageSource>/Resources/no_photo.png</ImageSource>
+                                    </Binding.TargetNullValue>
+                                </Binding>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Text="{Binding Adress}" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Left" Width="220" 
+                                   TextWrapping="Wrap" Margin="0" FontSize="12" FontWeight="Medium" Foreground="{StaticResource GradientTextGold}"
+                                    LineStackingStrategy="BlockLineHeight" LineHeight="14"/>
+                        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="auto" Margin="3 1" Click="btnSelectRes_Click">
+                            <TextBlock Text="Забронировать столик" FontSize="13.5"/>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid Grid.Column="1">
+            <TextBlock Style="{StaticResource Standart}" Text="Ваше имя" HorizontalAlignment="Stretch"/>
+            <TextBox Name="txtBoxName" Margin="5 30 5 0" PreviewTextInput="txtBoxText_PreviewTextInput"/>
+
+            <TextBlock Style="{StaticResource Standart}" Text="Номер телефона" Margin="5 80 5 0" HorizontalAlignment="Stretch"/>
+            <TextBox Name="txtBoxPNum" Margin="5 110 5 0" PreviewTextInput="txtBoxNumeric_PreviewTextInput" MaxLength="10"/>
+
+            <TextBlock Style="{StaticResource Standart}" Text="Дата и время бронирования" Margin="2 150 0 0" Width="180" FontSize="12"/>
+            <DatePicker Name="dtpResDate" Style="{DynamicResource DatePickerStyle}" Margin="5 190 5 0" HorizontalAlignment="Right" Foreground="{StaticResource GradientTextPurple}"/>
+
+            <ComboBox Style="{StaticResource StandartComboBox}" Name="cmbBoxTime" Margin="2 193 5 0" Width="85" FontSize="12"/>
+
+            <Button Content="Подтвердить" Width="140" VerticalAlignment="Top" Margin="5 240 5 0" Click="btnAccRes_Click"/>
+        </Grid>
+    </Grid>
+</Page>

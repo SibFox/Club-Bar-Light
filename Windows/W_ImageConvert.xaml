@@ -1,0 +1,32 @@
+﻿<Window x:Class="BarLight.Windows.W_ImageConvert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarLight.Windows"
+        mc:Ignorable="d"
+        Title="W_ImageConvert" Height="450" Width="800">
+    <Grid  DockPanel.Dock="Top"  Margin="5,5,5,5" Background="#FFA59A9A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Button Name="btnChooseImage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25 25 0 0" 
+                Width="auto" Height="auto" Content="Выбрать изображение" Click="btnChooseImage_Click"/>
+        <TextBlock Name="txtBlockChoosenImageName" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240 31 0 0" 
+                   Style="{StaticResource Standart}" Width="400" FontSize="10" Height="auto" Text="..." TextAlignment="Left"/>
+        <Image Name="imgConverted" HorizontalAlignment="Right" VerticalAlignment="Top" Stretch="Uniform"
+               Width="100" Height="100" Margin="5"/>
+        <Button Grid.Row="1" VerticalAlignment="Bottom" Name="btnLoadToDB" Width="auto" Height="auto"
+                Content="Загрузить" Click="btnLoadToDB_Click"/>
+        <Button Grid.Row="2" VerticalAlignment="Bottom" Margin="400 0 0 5" Name="btnShowLoadedImage" Width="auto" Height="auto"
+                Content="Показать изображение с ID" Click="btnShowLoadedImage_Click"/>
+        <TextBox Name="txtBoxID" VerticalAlignment="Center" Grid.Row="1" Margin="50 0 0 0"/>
+        <TextBlock Name="txtBlockName" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                   Grid.Row="1" Margin="0 0 110 0" Style="{StaticResource Standart}"/>
+        <Image Name="imgConvertedFromDB" HorizontalAlignment="Right" VerticalAlignment="Top" Stretch="Uniform"
+               Grid.Row="1" Width="100" Height="100" Margin="5"/>
+        <Image Name="imgShownFromDB" HorizontalAlignment="Right" VerticalAlignment="Top" Stretch="Uniform"
+               Grid.Row="1" Width="100" Height="100" Margin="0 100 5 0"/>
+    </Grid>
+</Window>
